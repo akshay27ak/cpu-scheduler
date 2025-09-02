@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CPU Scheduler Desktop Application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="first-box">
+        <div class="process-box">
+            <h1 class="process-box-heading">CPU Scheduler</h1>
+            <div class="input-elements">
+                <label class="algo-element" for="algorithmSelect">Choose Algorithm:</label>
+                <br>
+                <select class="algo-elements" id="algorithmSelect">
+                    <option value="FCFS">FCFS</option>
+                    <option value="RR">Round Robin</option>
+                    <option value="PreSJF">Preemptive Shortest Job First</option>
+                    <option value="MLQ">MultiLevelQueue Scheduling</option>
+                    <option value="Auto">Automatic Scheduling</option>
+                </select>
+            </div>
+            <br>
+            <div class="input-elements">
+                <label class="task-details"for="processInput">Enter Process Information:</label>
+                <br>
+                <textarea class="task-info" id="processInput" placeholder="Enter process details" rows="3"></textarea>
+            </div>
+            <button class="run-button" id="runSchedulerBtn">Run Scheduler</button>
+            <br>
+            <pre id="result" class="after-result"></pre>
+            <br>
+            <div class="second-box" id="averageBox" style="display: none;">
+                <div>
+                    <h1>Average Statistics</h1>
+                    <p id="averageTAT"></p>
+                    <p id="averageWT"></p>
+                    <p id="cpuOverhead"></p> 
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+    <div id="gantt-chart"></div>
+    <script src="renderer.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</body>
+</html>
