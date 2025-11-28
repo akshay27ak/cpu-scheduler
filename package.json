@@ -1,0 +1,15 @@
+{
+  "name": "cpu-scheduler",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Shivansh Kasaudhan",
+  "license": "ISC",
+  "description": "CPU Scheduler with Electron and C++ backend",
+  "devDependencies": {
+    "electron": "^31.0.1"
+  }
+}

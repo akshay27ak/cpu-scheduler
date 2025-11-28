@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPU Scheduler</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="toggleFields()" id="body">
+
+  <!-- Dark mode toggle button -->
+  <button id="dark-mode-toggle" onclick="toggleDarkMode()">
+    <span id="toggle-icon">🌓</span> <!-- Moon and sun emoji for toggle -->
+  </button>
+
+  <h1>CPU Scheduler</h1>
+
+  <div class="form-group">
+    <label for="algorithm">Select Algorithm:</label>
+    <select id="algorithm" onchange="toggleFields()">
+      <option value="FCFS">First-Come, First-Served (FCFS)</option>
+      <option value="SJF">Shortest Job First (SJF) (non-preemptive)</option>
+      <option value="SRTF">Shortest Remaining Time (SRT) (preemptive)</option>
+      <option value="RR">Round Robin (RR)</option>
+      <option value="PS">Priority Scheduling</option>
+      <option value="MLQ">Multilevel Queue Scheduling</option>
+      <option value="AUTO">Smart Schedule</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="process-id">Process IDs:</label>
+    <input type="text" id="process-id" name="process-id" placeholder="e.g. 1 2 3 4">
+  </div>
+  <div class="form-group">
+    <label for="arrival-time">Arrival Times:</label>
+    <input type="text" id="arrival-time" name="arrival-time" placeholder="e.g. 0 3 9 7">
+  </div>
+
+  <div class="form-group">
+    <label for="burst-time">Burst Times:</label>
+    <input type="text" id="burst-time" name="burst-time" placeholder="e.g. 5 4 1 3">
+  </div>
+
+  <div class="form-group" id="priority-field">
+    <label for="priority">Priority:</label>
+    <input type="text" id="priority" name="priority" placeholder="Lower # = higher priority">
+  </div>
+
+  <div class="form-group" id="quantum-field">
+    <label for="time-quantum">Time Quantum:</label>
+    <input type="text" id="time-quantum" name="time-quantum" placeholder="e.g. 2 (2 by default)">
+  </div>
+  
+  <button type="submit" id="submit">Run Scheduler</button>
+  <br>
+  <div id="result" style="margin: 10px;"></div>
+
+  <script src="script.js"></script>
+  <script src="renderer.js"></script>
+  <script>
+    // Function to toggle dark mode
+    function toggleDarkMode() {
+      var body = document.getElementById('body');
+      body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>

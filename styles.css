@@ -1,0 +1,111 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  position: relative; /* Ensure the body is relative for absolute positioning */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for mode change */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+label {
+  flex: 0 0 30%;
+  margin-right: 2%;
+  color: #333; /* Default label color */
+}
+
+input[type="text"],
+select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #333; /* Default text color */
+  background-color: #fff; /* Default background color */
+}
+
+button[type="submit"] {
+  padding: 12px 24px;
+  background-color: #2684FF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0058cb;
+  transform: scale(1.1);
+}
+
+#priority-field,
+#quantum-field {
+  display: none;
+}
+
+select {
+  cursor: pointer;
+}
+
+/* Dark mode specific styles */
+.dark-mode {
+  background-color: #333; /* Dark mode background */
+  color: #fff; /* Dark mode text color */
+}
+
+.dark-mode label {
+  color: #ccc; /* Dark mode label text color */
+}
+
+.dark-mode input[type="text"],
+.dark-mode select {
+  background-color: #444; /* Dark mode input background */
+  color: #ccc; /* Dark mode input text color */
+  border-color: #666; /* Dark mode input border color */
+}
+
+/* Positioned toggle button */
+#dark-mode-toggle {
+  position: absolute;
+  top: 20px; /* Adjust top position as needed */
+  right: 20px; /* Adjust right position as needed */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Makes it circular */
+  background-color: #fff; /* Light mode background color */
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#toggle-icon {
+  font-size: 20px; /* Adjust icon size */
+}
+
+.dark-mode #dark-mode-toggle {
+  background-color: #444; /* Dark mode background color */
+  color: #fff; /* Dark mode text color */
+}
+
+.dark-mode #toggle-icon {
+  transform: rotate(180deg); /* Rotate icon for dark mode */
+}
+
+#dark-mode-toggle:hover {
+  transform: scale(1.1); /* Optional: Add scaling effect on hover */
+}
