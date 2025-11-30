@@ -21,7 +21,7 @@ The auto_schedule function dynamically selects the most suitable scheduling algo
 
 * Git Clone this Repository
 ```bash
-    git clone https://github.com/akshay27ak/cpu_scheduler.git
+    git clone https://github.com/akshay27ak/CPU-Scheduler.com
 ```
 * Enter into the main directory
   ```bash
